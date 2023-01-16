@@ -1,2 +1,5 @@
 ### Pants Index
 GET http://localhost:3000/pants
+
+### Pants Show
+GET http://localhost:3000/pants/2
