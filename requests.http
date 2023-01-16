@@ -2,4 +2,15 @@
 GET http://localhost:3000/pants
 
 ### Pants Show
-GET http://localhost:3000/pants/2
+GET http://localhost:3000/pants/3
+
+### Pants Post
+POST http://localhost:3000/pants
+Content-Type: application/json
+
+{
+  "name": "test",
+  "size": "L",
+  "length": 34,
+  "waist": 36
+}
