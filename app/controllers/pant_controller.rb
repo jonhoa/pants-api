@@ -18,4 +18,10 @@ class PantController < ApplicationController
     )
     @Pants.save
   end
+
+  def destroy
+    @Pant = Pant.find_by(id: params[:id])
+    @Pant.destroy
+    render json: {message: "pant has been deleted"}
+  end
 end

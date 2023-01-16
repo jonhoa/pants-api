@@ -14,3 +14,6 @@ Content-Type: application/json
   "length": 34,
   "waist": 36
 }
+
+### Pants Delete
+DELETE http://localhost:3000/pants/6

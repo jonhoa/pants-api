@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/pants" => "pant#index"
   get "/pants/:id" => "pant#show"
   post "/pants" => "pant#create"
+  delete "/pants/:id" => "pant#destroy"
 end
