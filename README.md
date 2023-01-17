@@ -1,4 +1,5 @@
 # README
+Rails Api. It contains a Jean database in Postgres with various jeans, sizes and length. Will link up to React as the front-end.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
