@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/pants/:id" => "pant#show"
   post "/pants" => "pant#create"
   delete "/pants/:id" => "pant#destroy"
+  patch "/pants/:id" => "pant#update"
 end

@@ -5,7 +5,7 @@ class PantController < ApplicationController
   end
 
   def show
-    @Pants = Pant.find_by(id: 3)
+    @Pants = Pant.find_by(id: params[:id])
     render json:@Pants
   end
 
@@ -14,7 +14,9 @@ class PantController < ApplicationController
       name: params[:name],
       size: params[:size],
       length: params[:length],
-      waist: params[:waist]
+      waist: params[:waist],
+      style: params[:style],
+      image: params[:image]
     )
     @Pants.save
   end
@@ -23,5 +25,18 @@ class PantController < ApplicationController
     @Pant = Pant.find_by(id: params[:id])
     @Pant.destroy
     render json: {message: "pant has been deleted"}
+  end
+
+  def update
+    pant = Pant.find_by(id: params[:id])
+    pant.update(
+      name: params[:name] || pant.name,
+      size: params[:size] || pant.size,
+      length: params[:length] || pant.length,
+      waist: params[:waist] || pant.waist,
+      style: params[:style] || pant.style,
+      image: params[:image] || pant.image
+    )
+    render json: pant.as_json
   end
 end

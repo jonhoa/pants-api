@@ -2,18 +2,33 @@
 GET http://localhost:3000/pants
 
 ### Pants Show
-GET http://localhost:3000/pants/3
+GET http://localhost:3000/pants/7
 
 ### Pants Post
 POST http://localhost:3000/pants
 Content-Type: application/json
 
 {
-  "name": "test",
-  "size": "L",
-  "length": 34,
-  "waist": 36
+  "name": "Pattern Noir",
+  "size": "XL",
+  "length": 39,
+  "waist": 40,
+  "style": "Khaki",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5YfeLRZVlKiEpezIs_MbxhQvcuWLeXl9nqQ&usqp=CAU"
 }
 
 ### Pants Delete
-DELETE http://localhost:3000/pants/6
+DELETE http://localhost:3000/pants/8
+
+### Pants Update
+PATCH http://localhost:3000/pants/7
+Content-Type: application/json
+
+{
+  "name": "Cookie",
+  "size": "L",
+  "length": 34,
+  "waist": 36,
+  "style": "Khaki",
+  "image": ""
+}
